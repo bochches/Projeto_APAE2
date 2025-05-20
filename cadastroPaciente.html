@@ -31,204 +31,377 @@
             <h3>Cadastro de Paciente</h3>
             <div class="input-wrapper">
                 <span>Nome do Usuário:</span>
-                <input type="text" name="nome_usuario" placeholder="Digite o nome do usuário" required>
+                <input type="text" name="nome_usuario" required>
             </div>
             <div class="input-wrapper">
-                <span>CID:</span>
-                <input type="text" name="cid" placeholder="Digite o CID" required>
+                <span>Nome social:</span>
+                <input type="text" name="nome_social" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Número do prontuário:</span>
+                <input type="number" name="numero_prontuario" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Situação do cadastro:</span>
+                <input type="text" name="situacao_cadastro" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Área de atendimento:</span>
+                <div class="option-group">
+                    <label><input type="checkbox" name="atendimento" value="assistencia">Assistencia</label>
+                    <label><input type="checkbox" name="atendimento" value="avaliacao">Avaliacao</label>
+                    <label><input type="checkbox" name="atendimento" value="saude">Saude</label>
+                    <label><input type="checkbox" name="atendimento" value="educacao">Educacao</label>
+                    <label><input type="checkbox" name="atendimento" value="triagem">Triagem</label>
+                    <label><input type="checkbox" name="atendimento" value="lista_espera">Lista de espera</label>
+                    <label><input type="checkbox" name="atendimento" value="atividade_complementar">Atividades complementares</label>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <span>Data entrada/saída</span>
+                <input type="date" name="data_entrada_saida" required>
+            </div>
+            <div class="input-wrapper">
+                <span>CPF:</span>
+                <input type="number" name="cpf" required>
+            </div>
+            <div class="input-wrapper">
+                <span>RG:</span>
+                <input type="number" name="rg" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Data de emissão do RG:</span>
+                <input type="date" name="data_emissao" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Número da certidão de nascimento:</span>
+                <input type="number" name="numero_certidao_nascimeto" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Livro/folha:</span>
+                <input type="text" name="livro_folha" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Cartório:</span>
+                <input type="text" name="cartorio" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Naturalidade</span>
+                <input type="text" name="naturalidade" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Sexo:</span>
+                <select name="sexo" required>
+                    <option value="selecione">Selecione</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="outro">Outro</option>
+                </select>
             </div>
             <div class="input-wrapper">
                 <span>Data de Nascimento:</span>
                 <input type="date" name="data_nascimento" required>
             </div>
             <div class="input-wrapper">
-                <span>Nome do Responsável:</span>
-                <input type="text" name="nome_responsavel" placeholder="Digite o nome do responsável" required>
+                <span>Ocupação:</span>
+                <input type="text" name="ocupacao" required>
             </div>
-            <div class="input-wrapper duo-fields">
-                <div class="input-field">
-                    <span>Vínculo Familiar:</span>
-                    <select name="vinculo_familiar" required>
-                        <option value="" disabled selected>Selecione</option>
-                        <option value="mae">Mãe</option>
-                        <option value="pai">Pai</option>
-                        <option value="irmao">Irmão(ã)</option>
-                        <option value="tio">Tio(a)</option>
-                        <option value="outros">Outros</option>
-                    </select>
-                </div>
-                <div class="input-field">
-                    <span>Telefone:</span>
-                    <input type="tel" name="telefone" placeholder="(DD) 99999-9999"
-                        pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999"
-                        required>
+            <div class="input-wrapper">
+                <span>Número carteira PCD:</span>
+                <input type="number" name="carteira_pcd" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Número cartao NIS:</span>
+                <input type="numer" name="cartao_nis" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Número cartao SUS(CNS):</span>
+                <input type="number" name="cartao_sus" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Raça/cor:</span>
+                <select name="raca_cor" required>
+                    <option value="selecione">Selecione</option>
+                    <option value="branco">Branco</option>
+                    <option value="preto">Preto</option>
+                    <option value="pardo">Pardo</option>
+                    <option value="indigena">Indigena</option>
+                    <option value="nao_declarado">Não declarado</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+                <span>Modalidade:</span>
+                <div class="option-group">
+                    <label><input type="checkbox" name="modalidade" value="cadeirante">Cadeirante</label>
+                    <label><input type="checkbox" name="modalidade" value="andador">Andador</label>
+                    <label><input type="checkbox" name="modalidade" value="ortese">Órtese</label>
+                    <label><input type="checkbox" name="modalidade" value="protese">Prótese</label>
+                    <label><input type="checkbox" name="modalidade" value="muleta">Muleta</label>
+                    <label><input type="checkbox" name="modalidade" value="bengala">Bengala</label>
+                    <label><input type="checkbox" name="modalidade" value="nao_usa">Não faz uso</label>
                 </div>
             </div>
-
-            <!-- Seção 2: Informações Socioeconômicas -->
-            <h3>Informações Socioeconômicas</h3>
-            <div class="form-columns">
-                <div class="left-column">
+            <div class="input-wrapper">
+                <span>Tipo de deficiência</span>
+                <div class="option-group">
+                    <label><input type="checkbox" name="deficiencia" value="def_visual">Def.visual</label>
+                    <label><input type="checkbox" name="deficiencia" value="def_auditiva">Def.auditiva</label>
+                    <label><input type="checkbox" name="deficiencia" value="def_intelectual">Def.intelectual</label>
+                    <label><input type="checkbox" name="deficiencia" value="def_fisica">Def.física</label>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <span>Transtorno:</span>
+                <div class="option-group">
+                    <label><input type="checkbox" name="transtorno" value="tea">TEA</label>
+                    <label><input type="checkbox" name="transtorno" value="tdah">TDAH</label>
+                    <label><input type="checkbox" name="transtorno" value="ahsd">AH/SD</label>
+                    <label><input type="checkbox" name="transtorno" value="surdocegueira">Surdocegueira</label>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <span>CID 10:</span>
+                <input type="text" name="cid" required>
+            </div>
+            <div class="input-wrapper">
+                <span>CID 10 (opcional):</span>
+                <input type="text" name="cid" required>
+            </div>
+            <div class="input-wrapper">
+                <span>CID 10 (opcional):</span>
+                <input type="text" name="cid" required>
+            </div>
+            <div class="input-wrapper">
+                <span>CID 10 (opcional):</span>
+                <input type="text" name="cid" required>
+            </div>
+            <div class="input-wrapper">
+                <span>CID 11:</span>
+                <input type="text" name="cid" required>
+            </div>
+            <div class="input-wrapper">
+                <span>CEP:</span>
+                <input type="number" name="cep" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Endereço:</span>
+                <input type="text" name="endereco" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Número:</span>
+                <input type="number" name="numero" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Complemento:</span>
+                <input type="text" name="complemento" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Bairro:</span>
+                <input type="text" name="bairro" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Cidade:</span>
+                <input type="text" name="cidade" required>
+            </div>
+            <div class="input-wrapper">
+                <span>UF:</span>
+                <input type="text" name="uf" required>
+            </div>
+            <div class="input-wrapper">
+                <span><E-mail>E-mail:</E-mail></span>
+                <input type="email" name="email" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Telefone residencial:</span>
+                <input type="tel" name="telefone" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Telefone recados:</span>
+                <input type="tel" name="telefone" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Pessoa de contato:</span>
+                <input type="text" name="contato" required>
+            </div>
+            <div>
+                <h4>Dados Mãe:</h4>
+            </div>
+            <div class="input-wrapper">
+                <span>Nome:</span>
+                <input type="text" name="nome" required>
+            </div>
+            <div class="input-wrapper">
+                <span>CPF:</span>
+                <input type="number" name="cpf" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Telefone:</span>
+                <input type="tel" name="telefone" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999" required>
+                <div class="option-group">
+                    <label><input type="checkbox" name="telefone" value="notificacao">Enviar notificações via whatsapp</label>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <span><E-mail>E-mail:</E-mail></span>
+                <input type="email" name="email" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Ocupação:</span>
+                <input type="text" name="ocupacao" required>
+            </div>
+            <div>
+                <h4>Dados Pai:</h4>
+            </div>
+            <div class="input-wrapper">
+                <span>Nome:</span>
+                <input type="name" name="nome" required>
+            </div>
+            <div class="input-wrapper">
+                <span>CPF:</span>
+                <input type="number" name="cpf" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Telefone:</span>
+                <input type="tel" name="telefone" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999" required>
+                <div class="option-group">
+                    <label><input type="checkbox" name="telefone" value="notificacao">Enviar notificações via whatsapp</label>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <span><E-mail>E-mail:</E-mail></span>
+                <input type="email" name="email" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Ocupação:</span>
+                <input type="text" name="ocupacao" required>
+            </div>
+            <div>
+                <h4>Dados responsável:</h4>
+            </div>
+            <div class="input-wrapper">
+                <span>Nome:</span>
+                <input type="name" name="nome" required>
+            </div>
+            <div class="input-wrapper">
+                <span>CPF:</span>
+                <input type="number" name="cpf" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Telefone:</span>
+                <input type="tel" name="telefone" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999" required>
+                <div class="option-group">
+                    <label><input type="checkbox" name="telefone" value="notificacao">Enviar notificações via whatsapp</label>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <span><E-mail>E-mail:</E-mail></span>
+                <input type="email" name="email" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Ocupação:</span>
+                <input type="text" name="ocupacao" required>
+            </div>
+        
+            <!-- Seção 2: Questionário -->
+            <h3>Questionário</h3>
+                <div>
                     <div class="input-wrapper">
-                        <span>Composição familiar:</span>
-                        <input type="text" name="composicao_familiar" placeholder="Descreva a composição familiar"
-                            required>
-                    </div>
-                    <div class="input-wrapper">
-                        <span>Valor componente familiar:</span>
-                        <input type="text" name="valor_componente_familiar" placeholder="Digite o valor" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <span>Recebe BPC?</span>
-                        <div class="option-group">
-                            <label><input type="radio" name="bpc" value="sim" required> Sim</label>
-                            <label><input type="radio" name="bpc" value="não"> Não</label>
+                        <span>Utiliza medicamentos?</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="medicamentos" value="sim" required> Sim</label>
+                            <label><input type="radio" name="medicamentos" value="não" required> Não</label>
+                            <label><input type="radio" name="medicamentos" value="nao_informado" required>Não informado</label>
                         </div>
                     </div>
                     <div class="input-wrapper">
-                        <span>Recebe Bolsa Família?</span>
-                        <div class="option-group">
-                            <label><input type="radio" name="bolsa_familia" value="sim" required> Sim</label>
-                            <label><input type="radio" name="bolsa_familia" value="não"> Não</label>
+                        <span>Qual?</span>
+                        <input type="text" name="medicamentos" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Possui alergia?</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="alergia" value="sim" required> Sim</label>
+                            <label><input type="radio" name="alergia" value="não" required> Não</label>
+                            <label><input type="radio" name="alergia" value="nao_informado" required>Não informado</label>
                         </div>
                     </div>
-                </div>
-                <div class="right-column">
                     <div class="input-wrapper">
-                        <span>Quantas pessoas trabalham:</span>
-                        <input type="text" name="pessoas_trabalham" placeholder="Digite o número de pessoas" required>
+                        <span>Qual?</span>
+                        <input type="text" name="alergia" required>
                     </div>
                     <div class="input-wrapper">
-                        <span>Ao todo a renda familiar é:</span>
-                        <select name="renda_familiar" required>
-                            <option value="menor_que_um_sm">Menor que um s.m.</option>
-                            <option value="um_sm">Um s.m.</option>
-                            <option value="ate_dois_sm">Até dois s.m.</option>
-                            <option value="maior_que_dois_sm">Maior que dois s.m.</option>
+                        <span>Possui comorbidade?</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="comorbidade" value="sim" required> Sim</label>
+                            <label><input type="radio" name="comorbidade" value="não" required> Não</label>
+                            <label><input type="radio" name="comorbidade" value="nao_informado" required>Não informado</label>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Qual?</span>
+                        <input type="text" name="comorbidade" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Possui convênio médico?</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="convenio" value="sim" required> Sim</label>
+                            <label><input type="radio" name="convenio" value="não" required> Não</label>
+                            <label><input type="radio" name="convenio" value="nao_informado" required>Não informado</label>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Qual?</span>
+                        <input type="text" name="convenio" required>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-wrapper">
+                        <span>Liberado atividade física?</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="at_fisica" value="sim" required> Sim</label>
+                            <label><input type="radio" name="at_fisica" value="não" required> Não</label>
+                            <label><input type="radio" name="at_fisica" value="nao_informado" required>Não informado</label>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Data liberação:</span>
+                        <input type="text" name="at_fisica" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Meio de transporte (ida):</span>
+                        <select name="transporte" required>
+                            <option value="selecione">Selecione</option>
+                            <option value="onibus">Ônibus</option>
+                            <option value="veiculo_proprio">Veículo próprio</option>
+                            <option value="van">Van</option>
+                            <option value="moto-taxi">Moto-táxi</option>
+                            <option value="outro">Outro</option>
                         </select>
                     </div>
                     <div class="input-wrapper">
-                        <span>Residência:</span>
-                        <div class="option-group">
-                            <label><input type="radio" name="residencia" value="propria" required> Própria</label>
-                            <label><input type="radio" name="residencia" value="alugada"> Alugada</label>
-                            <label><input type="radio" name="residencia" value="cedida"> Cedida</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Seção 3: Informação Escolar -->
-            <h3>Informação Escolar</h3>
-            <div class="form-columns">
-                <div class="left-column">
-                    <div class="input-wrapper">
-                        <span>O usuário está matriculado na rede regular de ensino?</span>
-                        <div class="option-group">
-                            <label><input type="radio" name="matriculado" value="sim" required> Sim</label>
-                            <label><input type="radio" name="matriculado" value="não"> Não</label>
-                        </div>
+                        <span>Meio transporte (volta):</span>
+                        <select name="transporte" required>
+                            <option value="selecione">Selecione</option>
+                            <option value="onibus">Ônibus</option>
+                            <option value="veiculo_proprio">Veículo próprio</option>
+                            <option value="van">Van</option>
+                            <option value="moto-taxi">Moto-táxi</option>
+                            <option value="outro">Outro</option>
+                        </select>
                     </div>
                     <div class="input-wrapper">
-                        <span>A criança/adolescente possui mediador para auxiliar nas atividades dentro da
-                            escola?</span>
-                        <div class="option-group">
-                            <label><input type="radio" name="mediador" value="sim" required> Sim</label>
-                            <label><input type="radio" name="mediador" value="não"> Não</label>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <span>Série:</span>
-                        <input type="text" name="serie" placeholder="Digite a série" required>
-                    </div>
-                </div>
-                <div class="right-column">
-                    <div class="input-wrapper">
-                        <span>A escola é:</span>
-                        <div class="option-group">
-                            <label><input type="radio" name="escola" value="particular" required> Particular</label>
-                            <label><input type="radio" name="escola" value="publica"> Pública</label>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <span>Nome da escola:</span>
-                        <input type="text" name="nome_escola" placeholder="Digite o nome da escola" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <span>Turno que estuda:</span>
-                        <div class="option-group-vertical">
-                            <label><input type="radio" name="turno" value="manha" required> Manhã</label>
-                            <label><input type="radio" name="turno" value="tarde"> Tarde</label>
-                            <label><input type="radio" name="turno" value="noite"> Noite</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Seção 4: Tipos de Atendimento -->
-            <h3>Tipos de Atendimento</h3>
-            <div class="grid-container">
-                <div class="column">
-                    <div class="input-wrapper">
-                        <span>Fisioterapia:</span>
+                        <span>Autorização uso de imagem:</span>
                         <div class="radio-group">
-                            <label><input type="radio" name="fisioterapia" value="sim" required> Sim</label>
-                            <label><input type="radio" name="fisioterapia" value="não" required> Não</label>
+                            <label><input type="radio" name="uso_imagem" value="sim" required> Sim</label>
+                            <label><input type="radio" name="uso_imagem" value="não" required> Não</label>
+                            <label><input type="radio" name="uso_imagem" value="nao_informado" required>Não informado</label>
                         </div>
                     </div>
                     <div class="input-wrapper">
-                        <span>Pintura:</span>
-                        <div class="radio-group">
-                            <label><input type="radio" name="pintura" value="sim" required> Sim</label>
-                            <label><input type="radio" name="pintura" value="não" required> Não</label>
-                        </div>
+                        <span>Observações:</span>
+                        <input type="text" name="observacao" required>
                     </div>
-                    <div class="input-wrapper">
-                        <span>Música:</span>
-                        <div class="radio-group">
-                            <label><input type="radio" name="musica" value="sim" required> Sim</label>
-                            <label><input type="radio" name="musica" value="não" required> Não</label>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <span>Hidroterapia:</span>
-                        <div class="radio-group">
-                            <label><input type="radio" name="hidroterapia" value="sim" required> Sim</label>
-                            <label><input type="radio" name="hidroterapia" value="não" required> Não</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="input-wrapper">
-                        <span>Informática:</span>
-                        <div class="radio-group">
-                            <label><input type="radio" name="informatica" value="sim" required> Sim</label>
-                            <label><input type="radio" name="informatica" value="não" required> Não</label>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <span>Terapia Ocupacional:</span>
-                        <div class="radio-group">
-                            <label><input type="radio" name="terapia_ocupacional" value="sim" required> Sim</label>
-                            <label><input type="radio" name="terapia_ocupacional" value="não" required> Não</label>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <span>Fonoaudiologia:</span>
-                        <div class="radio-group">
-                            <label><input type="radio" name="fonoaudiologia" value="sim" required> Sim</label>
-                            <label><input type="radio" name="fonoaudiologia" value="não" required> Não</label>
-                        </div>
-                    </div>
-                    <div class="input-wrapper">
-                        <span>Psicologia:</span>
-                        <div class="radio-group">
-                            <label><input type="radio" name="psicologia" value="sim" required> Sim</label>
-                            <label><input type="radio" name="psicologia" value="não" required> Não</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    
             <button type="submit" class="login-link">Cadastrar</button>
 
         </form>

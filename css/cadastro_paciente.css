@@ -61,15 +61,71 @@ body {
 .card input[type="email"],
 .card input[type="text"],
 .card input[type="date"],
-.card input[type="tel"],
 .card select {
-    width: calc(100% - 10px);
+    width: calc(91% - 10px);
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     text-align: center;
     display: block;
-    margin: 0 auto;
+    margin: 10px;
+}
+
+.card input[type="tel"] {
+    width: calc(26% - 10px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+    margin: 10px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre os elementos */
+}
+
+.option-group {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Evita quebra de linha */
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+  
+.input-wrapper > span {
+    min-width: 150px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+  
+.option-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 40px; /* espaçamento vertical e horizontal */
+    max-width: 600px;
+}
+  
+.option-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    text-transform: uppercase; /* deixa o texto todo em maiúsculo */
+    color: #555; /* cor discreta */
+    white-space: nowrap;
+}
+
+h4{
+    margin-bottom: 20px;
+
 }
 
 /* Estilo dos campos em duplas */
