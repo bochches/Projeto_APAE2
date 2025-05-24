@@ -401,6 +401,14 @@
                         <span>Observações:</span>
                         <input type="text" name="observacao">
                     </div>
+
+                    <div class="input-wrapper">
+                        <form action="/upload" method="post" enctype="multipart/form-data">
+                            <label for="arquivo">Selecione um arquivo:</label>
+                            <input type="file" id="arquivo" name="arquivo" accept=".pdf, .doc, .docx">
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
                     
             <button type="submit" class="login-link">Cadastrar</button>
 
