@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste Simples de Formulários</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    form { margin-bottom: 30px; padding: 15px; border: 1px solid #ccc; }
+    label { display: block; margin-top: 10px; }
+    .mensagem { margin-top: 10px; font-weight: bold; }
+    .sucesso { color: green; }
+    .erro { color: red; }
+  </style>
+</head>
+<body>
+
+  <h2>Cadastro de Contato</h2>
+  <form id="formContato">
+    <label>Nome:</label>
+    <input type="text" id="nomeContato">
+    <label>Email:</label>
+    <input type="email" id="emailContato">
+    <button type="submit">Cadastrar Contato</button>
+    <div class="mensagem" id="msgContato"></div>
+  </form>
+
+  <h2>Atualizar Contato</h2>
+  <form id="formAtualizar">
+    <label>Email existente:</label>
+    <input type="email" id="emailBuscar">
+    <label>Novo Nome:</label>
+    <input type="text" id="novoNome">
+    <button type="submit">Atualizar Contato</button>
+    <div class="mensagem" id="msgAtualizar"></div>
+  </form>
+
+  <h2>Cadastro de Paciente</h2>
+  <form id="formPaciente">
+    <label>Nome do Paciente:</label>
+    <input type="text" id="nomePaciente">
+    <label>Data de Nascimento:</label>
+    <input type="date" id="dataNascimento">
+    <button type="submit">Cadastrar Paciente</button>
+    <div class="mensagem" id="msgPaciente"></div>
+  </form>
+
+  <script>
+    let contatos = [];
+
+    // Cadastrar contato
+    document.getElementById("formContato").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nome = document.getElementById("nomeContato").value.trim();
+      const email = document.getElementById("emailContato").value.trim();
+      const msg = document.getElementById("msgContato");
+
+      if (nome && email) {
+        contatos.push({ nome, email });
+        msg.textContent = "Contato cadastrado com sucesso!";
+        msg.className = "mensagem sucesso";
+      } else {
+        msg.textContent = "Preencha todos os campos!";
+        msg.className = "mensagem erro";
+      }
+    });
+
+    // Atualizar contato
+    document.getElementById("formAtualizar").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const emailBuscar = document.getElementById("emailBuscar").value.trim();
+      const novoNome = document.getElementById("novoNome").value.trim();
+      const msg = document.getElementById("msgAtualizar");
+
+      const contato = contatos.find(c => c.email === emailBuscar);
+      if (contato) {
+        contato.nome = novoNome;
+        msg.textContent = "Contato atualizado com sucesso!";
+        msg.className = "mensagem sucesso";
+      } else {
+        msg.textContent = "Contato não encontrado.";
+        msg.className = "mensagem erro";
+      }
+    });
+
+    // Cadastrar paciente
+    document.getElementById("formPaciente").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nome = document.getElementById("nomePaciente").value.trim();
+      const data = document.getElementById("dataNascimento").value;
+      const msg = document.getElementById("msgPaciente");
+
+      if (nome && data) {
+        msg.textContent = "Paciente cadastrado com sucesso!";
+        msg.className = "mensagem sucesso";
+      } else {
+        msg.textContent = "Preencha todos os campos!";
+        msg.className = "mensagem erro";
+      }
+    });
+  </script>
+
+</body>
+</html>
