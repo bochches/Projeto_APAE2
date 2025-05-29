@@ -1,0 +1,47 @@
+Nome do Usuário:
+Nome social:
+Número do prontuário:
+Situação do cadastro:
+Área de atendimento:
+Data entrada/saída
+Data de emissão do RG:
+Número da certidão de nascimento:
+Livro/folha:
+Cartório:
+Naturalidade
+Sexo:
+Data de Nascimento:
+Ocupação:
+Número carteira PCD:
+Número cartao NIS:
+Número cartao SUS(CNS):
+Raça/cor
+Modalidade:
+Tipo de deficiência
+Transtorno:
+CID 10:
+Endereço:
+Número:
+Complemento:
+Bairro:
+Cidade:
+UF:
+Telefone residencial:
+Telefone recados:
+Pessoa de contato:
+Dados Mãe: cpf telefone, email, Ocupação:
+Dados Pai: Nome: CPF: Telefone: E-mail, Ocupação:
+Dados responsável: cpf telefone, email, Ocupação:
+
+Questionario
+medicamento utilizado
+possuir alergia
+possui comordidade
+convenio medico
+atividade fisica liberada
+meio transporte
+autorizacao uso de imagem
+observações
+
+
+
