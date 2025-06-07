@@ -19,12 +19,12 @@ body {
     padding: 50px;
     color: #333;
     flex: 1;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .contact-info, 
 .contact-form {
-    background-color: rgba(230, 206, 206, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     padding: 20px;
     width: 45%;
@@ -35,10 +35,16 @@ body {
 .contact-details h3, 
 .contact-form h2 {
     margin-bottom: 5px; /* Espaço abaixo dos títulos */
-    font-size: 18px;
+    font-size: 20px;
     color: #444;
-    
+    text-align: center;
 }
+
+.contact-details h2 {
+    text-align: justify;
+    font-size: 20px;
+}
+
 .contact-details p {
     margin-top: 20px;
 }
@@ -47,7 +53,7 @@ body {
 .contact-details p, 
 .input-wrapper {
     margin-bottom: 15px;
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
 }
 
@@ -94,7 +100,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    margin-top: 40px; /* Espaço acima do rodapé */
+    margin-top: 20px; /* Espaço acima do rodapé */
 }
 
 /* Responsividade */
