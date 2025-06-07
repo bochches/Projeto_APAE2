@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, #f0d436, #274688, #267696, #d81a1a);
+  background: linear-gradient(90deg, #f0d436, #274688, #267696, #45c911b2);
   padding: 0 20px;
   height: 70px;
   position: fixed;
@@ -108,7 +108,7 @@ body {
     position: absolute;
     top: 70px;
     left: 0;
-    background: linear-gradient(90deg, #f8db36, #32cd32, #87ceeb, #ec3939);
+    background: linear-gradient(90deg, #f8db36, #32cd32, #87ceeb, #45c911b2);
   }
 
   .nav-links li {

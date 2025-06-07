@@ -3,7 +3,7 @@ html,
 body {
     height: 100%;
     margin: 0;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 body {
@@ -66,54 +66,61 @@ main {
 }
 
 .about-content {
-    margin-top: 20px;
-    font-size: 1em;
-    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os cards se movam para a próxima linha se não houver espaço suficiente */
+    gap: 50px;
+    /* Espaço entre os cards */
+    justify-content: center;
+    /* Centraliza os cards horizontalmente */
+    margin-top: 40px;
+}
+
+.about-content p {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
     text-align: justify;
+    width: calc(50% - 20px);
+    /* Ajusta a largura dos cards para dois por linha, considerando o gap */
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .about-content ul {
     list-style: none;
     padding: 0;
     text-align: justify;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: calc(50% - 20px);
+    /* Ajusta a largura dos cards para dois por linha, considerando o gap */
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .about-content ul li {
-    margin: 5px 0;
-}
-
-/* Seção Funcionários */
-.staff-section {
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-}
-
-.staff-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.staff-member {
-    max-width: 30%;
-    margin: 10px;
-    text-align: center;
-}
-
-.staff-member img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.staff-member p {
-    margin: 5px 0;
+    margin: 20px 0;
 }
 
 /* Doações */
 .donation-section {
-   
     padding: 20px;
     text-align: center;
     width: 100%;
