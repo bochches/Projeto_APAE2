@@ -1,36 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('cadastroCompletoForm');
-    const submitButton = form.querySelector('button[type="submit"]');
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        // Cria um objeto para armazenar os dados do formulário
+        const getCheckboxValues = (name) => {
+            return Array.from(form.querySelectorAll(`input[name="${name}"]:checked`))
+                .map(checkbox => checkbox.value);
+        };
+
         const formData = {
-            nome_usuario: form.nome_usuario.value,
             nome_usuario: form.nome_usuario.value,
             nome_social: form.nome_social.value,
             numero_prontuario: form.numero_prontuario.value,
             situacao_cadastro: form.situacao_cadastro.value,
-            area_atendimento: form.area_atendimento.value,
+            area_atendimento: getCheckboxValues('area_atendimento'),
             data_entrada_saida: form.data_entrada_saida.value,
             cpf: form.cpf.value,
             rg: form.rg.value,
             data_emissao: form.data_emissao.value,
-            numero_certidao_nascimeto: form.numero_certidao_nascimeto.value,
+            numero_certidao_nascimento: form.numero_certidao_nascimento.value,
             livro_folha: form.livro_folha.value,
             cartorio: form.cartorio.value,
             naturalidade: form.naturalidade.value,
             sexo: form.sexo.value,
+            data_nascimento: form.data_nascimento.value,
             ocupacao: form.ocupacao.value,
-            carteira_pcd: form.carteira_pcd.value,
-            cartao_nis: form.cartao_nis.value,
-            cartao_sus: form.cartao_sus.value,
+            numero_carteira_pcd: form.numero_carteira_pcd.value,
+            numero_cartao_nis: form.numero_cartao_nis.value,
+            numero_cartao_sus: form.numero_cartao_sus.value,
             raca_cor: form.raca_cor.value,
-            modalidade: form.modalidade.value,
-            deficiencia: form.deficiencia.value,
-            transtorno: form.transtorno.value,
-            cid: form.cid.value,
+            modalidade: getCheckboxValues('modalidade'),
+            tipo_deficiencia: getCheckboxValues('tipo_deficiencia'),
+            transtorno: getCheckboxValues('transtorno'),
+            cid10: form.cid10.value,
+            cid10_opcional: form["cid10(opcional)"].value,
+            cid11: form.cid11.value,
             cep: form.cep.value,
             endereco: form.endereco.value,
             numero: form.numero.value,
@@ -39,78 +44,49 @@ document.addEventListener('DOMContentLoaded', () => {
             cidade: form.cidade.value,
             uf: form.uf.value,
             email: form.email.value,
-            telefone: form.telefone.value,
-            telefone: form.telefone.value,
-            contato: form.contato.value,
-            nome: form.nome.value,
-            cpf: form.cpf.value,
-            telefone: form.telefone.value,
-            email: form.email.value,
-            ocupacao: form.ocupacao.value,
-            nome: form.nome.value,
-            cpf: form.cpf.value,
-            telefone: form.telefone.value,
-            email: form.email.value,
-            ocupacao: form.ocupacao.value,
-            nome: form.nome.value,
-            cpf: form.cpf.value,
-            telefone: form.telefone.value,
-            email: form.email.value,
-            ocupacao: form.ocupacao.value,
-            medicamentos: form.medicamentos.value,
-            alergia: form.alergia.value,
-            comorbidade: form.comorbidade.value,
-            convenio: form.convenio.value,
-            at_fisica: form.at_fisica.value,
-            transporte: form.transporte.value,
-            uso_imagem: form.uso_imagem.value,
-            observacao: form.observacao.value,
+            telefone_residencial: form.telefone_residencial.value,
+            telefone_recados: form.telefone_recados.value,
+            pessoa_contato: form.pessoa_contato.value,
+
+            nome_mae: form.nome_mae.value,
+            cpf_mae: form.cpf_mae.value,
+            telefone_mae: form.telefone_mae.value,
+            email_mae: form.email_mae.value,
+            ocupacao_mae: form.ocupacao_mae.value,
+
+            nome_pai: form.nome_pai.value,
+            cpf_pai: form.cpf_pai.value,
+            telefone_pai: form.telefone_pai.value,
+            email_pai: form.email_pai.value,
+            ocupacao_pai: form.ocupacao_pai.value,
+
+            nome_responsavel: form.nome_responsavel.value,
+            cpf_responsavel: form.cpf_responsavel.value,
+            telefone_responsavel: form.telefone_responsavel.value,
+            email_responsavel: form.email_responsavel.value,
+            ocupacao_responsavel: form.ocupacao_responsavel.value,
+
+            utiliza_medicamentos: form.utiliza_medicamentos.value,
+            qual_medicamento: form.qual_medicamento.value,
+            possui_alergia: form.possui_alergia.value,
+            qual_alergia: form.qual_alergia.value,
+            possui_comorbidade: form.possui_comorbidade.value,
+            qual_comorbidade: form.qual_comorbidade.value,
+            possui_convenio_medico: form.possui_convenio_medico.value,
+            qual_convenio: form.qual_convenio.value,
+            liberado_atividade_fisica: form.liberado_atividade_fisica.value,
+            data_liberacao_atividade_fisica: form.data_liberacao_atividade_fisica.value,
+            meio_transporte_ida: form.meio_transporte_ida.value,
+            meio_transporte_volta: form.meio_transporte_volta.value,
+            autorizacao_uso_imagem: form.autorizacao_uso_imagem.value,
+            observacoes: form.observacoes.value
         };
 
-        // Obtém pacientes do localStorage ou cria um array vazio
         let pacientes = JSON.parse(localStorage.getItem('pacientes')) || [];
-
-        // Adiciona o novo paciente ao array
         pacientes.push(formData);
-
-        // Armazena o array atualizado no localStorage
         localStorage.setItem('pacientes', JSON.stringify(pacientes));
 
-        // Exibe uma mensagem de confirmação
         alert('Paciente cadastrado com sucesso!');
-
-        // Opcional: Redirecionar para a página de listagem após o cadastro
         window.location.href = 'listagem.html';
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-        var telefoneInput = document.querySelector('input[name="telefone"]');
-
-        telefoneInput.addEventListener('input', function () {
-            var telefone = telefoneInput.value.replace(/\D/g, '');
-
-            if (telefone.length > 2 && telefone[2] !== '9') {
-                telefone = telefone.slice(0, 2) + '9' + telefone.slice(2);
-            }
-
-            var formattedTelefone = formatarTelefone(telefone);
-            telefoneInput.value = formattedTelefone;
-        });
-
-        function formatarTelefone(telefone) {
-            var formatted = telefone;
-
-            if (telefone.length <= 2) {
-                formatted = '(' + telefone;
-            } else if (telefone.length <= 7) {
-                formatted = '(' + telefone.substr(0, 2) + ') ' + telefone.substr(2);
-            } else if (telefone.length <= 11) {
-                formatted = '(' + telefone.substr(0, 2) + ') ' + telefone.substr(2, 5) + '-' + telefone.substr(7);
-            } else {
-                formatted = '(' + telefone.substr(0, 2) + ') ' + telefone.substr(2, 5) + '-' + telefone.substr(7, 4);
-            }
-
-            return formatted;
-        }
     });
 });
