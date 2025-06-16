@@ -48,13 +48,13 @@
             <div class="input-wrapper">
                 <span>Área de atendimento: *</span><br>
                 <div class="option-group">
-                    <label><input type="checkbox" name="atendimento" value="assistencia">Assistencia</label>
-                    <label><input type="checkbox" name="atendimento" value="avaliacao">Avaliacao</label>
-                    <label><input type="checkbox" name="atendimento" value="saude">Saude</label>
-                    <label><input type="checkbox" name="atendimento" value="educacao">Educacao</label>
-                    <label><input type="checkbox" name="atendimento" value="triagem">Triagem</label>
-                    <label><input type="checkbox" name="atendimento" value="lista_espera">Lista de espera</label>
-                    <label><input type="checkbox" name="atendimento" value="atividade_complementar">Atividades complementares</label>
+                    <label><input type="checkbox" name="area_atendimento" value="assistencia">Assistencia</label>
+                    <label><input type="checkbox" name="area_atendimento" value="avaliacao">Avaliacao</label>
+                    <label><input type="checkbox" name="area_atendimento" value="saude">Saude</label>
+                    <label><input type="checkbox" name="area_atendimento" value="educacao">Educacao</label>
+                    <label><input type="checkbox" name="area_atendimento" value="triagem">Triagem</label>
+                    <label><input type="checkbox" name="area_atendimento" value="lista_espera">Lista de espera</label>
+                    <label><input type="checkbox" name="area_atendimento" value="atividade_complementar">Atividades complementares</label>
                 </div>
             </div>
             <div class="input-wrapper">
@@ -75,7 +75,7 @@
             </div>
             <div class="input-wrapper">
                 <span>Número da certidão de nascimento: *</span>
-                <input type="number" name="numero_certidao_nascimeto" required>
+                <input type="number" name="numero_certidao_nascimento" required>
             </div>
             <div class="input-wrapper">
                 <span>Livro/folha: *</span>
@@ -108,15 +108,15 @@
             </div>
             <div class="input-wrapper">
                 <span>Número carteira PCD:</span>
-                <input type="number" name="carteira_pcd">
+                <input type="number" name="numero_carteira_pcd">
             </div>
             <div class="input-wrapper">
                 <span>Número cartão NIS: *</span>
-                <input type="numer" name="cartao_nis" required>
+                <input type="number" name="numero_cartao_nis" required>
             </div>
             <div class="input-wrapper">
                 <span>Número cartão SUS(CNS): *</span>
-                <input type="number" name="cartao_sus" required>
+                <input type="number" name="numero_cartao_sus" required>
             </div>
             <div class="input-wrapper">
                 <span>Raça/cor: *</span>
@@ -145,10 +145,10 @@
             <div class="input-wrapper">
                 <span>Tipo de deficiência: *</span>
                 <div class="option-group">
-                    <label><input type="checkbox" name="deficiencia" value="def_visual">Def.visual</label>
-                    <label><input type="checkbox" name="deficiencia" value="def_auditiva">Def.auditiva</label>
-                    <label><input type="checkbox" name="deficiencia" value="def_intelectual">Def.intelectual</label>
-                    <label><input type="checkbox" name="deficiencia" value="def_fisica">Def.física</label>
+                    <label><input type="checkbox" name="tipo_deficiencia" value="def_visual">Def.visual</label>
+                    <label><input type="checkbox" name="tipo_deficiencia" value="def_auditiva">Def.auditiva</label>
+                    <label><input type="checkbox" name="tipo_deficiencia" value="def_intelectual">Def.intelectual</label>
+                    <label><input type="checkbox" name="tipo_deficiencia" value="def_fisica">Def.física</label>
                 </div>
             </div>
             <div class="input-wrapper">
@@ -162,15 +162,15 @@
             </div>
             <div class="input-wrapper">
                 <span>CID 10: *</span>
-                <input type="text" name="cid" required>
+                <input type="text" name="cid10" required>
             </div>
             <div class="input-wrapper">
                 <span>CID 10 (opcional):</span>
-                <input type="text" name="cid">
+                <input type="text" name="cid10(opcional)">
             </div>
             <div class="input-wrapper">
                 <span>CID 11: *</span>
-                <input type="text" name="cid" required>
+                <input type="text" name="cid11" required>
             </div>
             <div class="input-wrapper">
                 <span>CEP: *</span>
@@ -206,93 +206,93 @@
             </div>
             <div class="input-wrapper">
                 <span>Telefone residencial:</span>
-                <input type="tel" name="telefone" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999">
+                <input type="tel" name="telefone_residencial" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999">
             </div>
             <div class="input-wrapper">
                 <span>Telefone recados: *</span>
-                <input type="tel" name="telefone" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999" required>
+                <input type="tel" name="telefone_recados" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999" required>
             </div>
             <div class="input-wrapper">
                 <span>Pessoa de contato: *</span>
-                <input type="text" name="contato" required>
+                <input type="text" name="pessoa_contato" required>
             </div>
             <div>
                 <h4>Dados Mãe:</h4>
             </div>
             <div class="input-wrapper">
                 <span>Nome: *</span>
-                <input type="text" name="nome" required>
+                <input type="text" name="nome_mae" required>
             </div>
             <div class="input-wrapper">
                 <span>CPF: *</span>
-                <input type="number" name="cpf" required>
+                <input type="number" name="cpf_mae" required>
             </div>
             <div class="input-wrapper">
                 <span>Telefone: *</span>
-                <input type="tel" name="telefone" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999" required>
+                <input type="tel" name="telefone_mae" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999" required>
                 <div class="option-group">
-                    <label><input type="checkbox" name="telefone" value="notificacao">Enviar notificações via whatsapp</label>
+                    <label><input type="checkbox" name="telefone_mae" value="notificacao">Enviar notificações via whatsapp</label>
                 </div>
             </div>
             <div class="input-wrapper">
                 <span><E-mail>E-mail: *</E-mail></span>
-                <input type="email" name="email" required>
+                <input type="email" name="email_mae" required>
             </div>
             <div class="input-wrapper">
                 <span>Ocupação:</span>
-                <input type="text" name="ocupacao">
+                <input type="text" name="ocupacao_mae">
             </div>
             <div>
                 <h4>Dados Pai:</h4>
             </div>
             <div class="input-wrapper">
                 <span>Nome:</span>
-                <input type="name" name="nome">
+                <input type="text" name="nome_pai">
             </div>
             <div class="input-wrapper">
                 <span>CPF:</span>
-                <input type="number" name="cpf">
+                <input type="number" name="cpf_pai">
             </div>
             <div class="input-wrapper">
                 <span>Telefone:</span>
-                <input type="tel" name="telefone" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999">
+                <input type="tel" name="telefone_pai" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999">
                 <div class="option-group">
-                    <label><input type="checkbox" name="telefone" value="notificacao">Enviar notificações via whatsapp</label>
+                    <label><input type="checkbox" name="telefone_pai" value="notificacao">Enviar notificações via whatsapp</label>
                 </div>
             </div>
             <div class="input-wrapper">
                 <span><E-mail>E-mail:</E-mail></span>
-                <input type="email" name="email">
+                <input type="email" name="email_pai">
             </div>
             <div class="input-wrapper">
                 <span>Ocupação:</span>
-                <input type="text" name="ocupacao">
+                <input type="text" name="ocupacao_pai">
             </div>
             <div>
                 <h4>Dados responsável:</h4>
             </div>
             <div class="input-wrapper">
                 <span>Nome: *</span>
-                <input type="name" name="nome" required>
+                <input type="text" name="nome_responsavel" required>
             </div>
             <div class="input-wrapper">
                 <span>CPF: *</span>
-                <input type="number" name="cpf" required>
+                <input type="number" name="cpf_responsavel" required>
             </div>
             <div class="input-wrapper">
                 <span>Telefone: *</span>
-                <input type="tel" name="telefone" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999" required>
+                <input type="tel" name="telefone_responsavel" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}" title="Digite um telefone válido (DD) 99999-9999" required>
                 <div class="option-group">
-                    <label><input type="checkbox" name="telefone" value="notificacao">Enviar notificações via whatsapp</label>
+                    <label><input type="checkbox" name="telefone_responsavel" value="notificacao">Enviar notificações via whatsapp</label>
                 </div>
             </div>
             <div class="input-wrapper">
                 <span><E-mail>E-mail: *</E-mail></span>
-                <input type="email" name="email" required>
+                <input type="email" name="email_responsavel" required>
             </div>
             <div class="input-wrapper">
                 <span>Ocupação:</span>
-                <input type="text" name="ocupacao">
+                <input type="text" name="ocupacao_responsavel">
             </div>
         
             <!-- Seção 2: Questionário -->
@@ -301,68 +301,68 @@
                     <div class="input-wrapper">
                         <span>Utiliza medicamentos? *</span>
                         <div class="radio-group">
-                            <label><input type="radio" name="medicamentos" value="sim" required> Sim</label>
-                            <label><input type="radio" name="medicamentos" value="não" required> Não</label>
-                            <label><input type="radio" name="medicamentos" value="nao_informado" required>Não informado</label>
+                            <label><input type="radio" name="utiliza_medicamentos" value="sim" required> Sim</label>
+                            <label><input type="radio" name="utiliza_medicamentos" value="não" required> Não</label>
+                            <label><input type="radio" name="utiliza_medicamentos" value="nao_informado" required>Não informado</label>
                         </div>
                     </div>
                     <div class="input-wrapper">
                         <span>Qual?</span>
-                        <input type="text" name="medicamentos">
+                        <input type="text" name="qual_medicamento">
                     </div>
                     <div class="input-wrapper">
                         <span>Possui alergia? *</span>
                         <div class="radio-group">
-                            <label><input type="radio" name="alergia" value="sim" required> Sim</label>
-                            <label><input type="radio" name="alergia" value="não" required> Não</label>
-                            <label><input type="radio" name="alergia" value="nao_informado" required>Não informado</label>
+                            <label><input type="radio" name="possui_alergia" value="sim" required> Sim</label>
+                            <label><input type="radio" name="possui_alergia" value="não" required> Não</label>
+                            <label><input type="radio" name="possui_alergia" value="nao_informado" required>Não informado</label>
                         </div>
                     </div>
                     <div class="input-wrapper">
                         <span>Qual?</span>
-                        <input type="text" name="alergia">
+                        <input type="text" name="qual_alergia">
                     </div>
                     <div class="input-wrapper">
                         <span>Possui comorbidade? *</span>
                         <div class="radio-group">
-                            <label><input type="radio" name="comorbidade" value="sim" required> Sim</label>
-                            <label><input type="radio" name="comorbidade" value="não" required> Não</label>
-                            <label><input type="radio" name="comorbidade" value="nao_informado" required>Não informado</label>
+                            <label><input type="radio" name="possui_comorbidade" value="sim" required> Sim</label>
+                            <label><input type="radio" name="possui_comorbidade" value="não" required> Não</label>
+                            <label><input type="radio" name="possui_comorbidade" value="nao_informado" required>Não informado</label>
                         </div>
                     </div>
                     <div class="input-wrapper">
                         <span>Qual?</span>
-                        <input type="text" name="comorbidade">
+                        <input type="text" name="qual_comorbidade">
                     </div>
                     <div class="input-wrapper">
                         <span>Possui convênio médico? *</span>
                         <div class="radio-group">
-                            <label><input type="radio" name="convenio" value="sim" required> Sim</label>
-                            <label><input type="radio" name="convenio" value="não" required> Não</label>
-                            <label><input type="radio" name="convenio" value="nao_informado" required>Não informado</label>
+                            <label><input type="radio" name="possui_convenio_medico" value="sim" required> Sim</label>
+                            <label><input type="radio" name="possui_convenio_medico" value="não" required> Não</label>
+                            <label><input type="radio" name="possui_convenio_medico" value="nao_informado" required>Não informado</label>
                         </div>
                     </div>
                     <div class="input-wrapper">
                         <span>Qual?</span>
-                        <input type="text" name="convenio">
+                        <input type="text" name="qual_convenio">
                     </div>
                 </div>
                 <div>
                     <div class="input-wrapper">
                         <span>Liberado atividade física? *</span>
                         <div class="radio-group">
-                            <label><input type="radio" name="at_fisica" value="sim" required> Sim</label>
-                            <label><input type="radio" name="at_fisica" value="não" required> Não</label>
-                            <label><input type="radio" name="at_fisica" value="nao_informado" required>Não informado</label>
+                            <label><input type="radio" name="liberado_atividade_fisica" value="sim" required> Sim</label>
+                            <label><input type="radio" name="liberado_atividade_fisica" value="não" required> Não</label>
+                            <label><input type="radio" name="liberado_atividade_fisica" value="nao_informado" required>Não informado</label>
                         </div>
                     </div>
                     <div class="input-wrapper">
-                        <span>Data liberação: *</span>
-                        <input type="date" name="at_fisica" required>
+                        <span>Data liberação:</span>
+                        <input type="date" name="data_liberacao_atividade_fisica">
                     </div>
                     <div class="input-wrapper">
                         <span>Meio de transporte (ida): *</span>
-                        <select name="transporte" required>
+                        <select name="meio_transporte_ida" required>
                             <option value="selecione">Selecione</option>
                             <option value="onibus">Ônibus</option>
                             <option value="veiculo_proprio">Veículo próprio</option>
@@ -373,7 +373,7 @@
                     </div>
                     <div class="input-wrapper">
                         <span>Meio transporte (volta): *</span>
-                        <select name="transporte" required>
+                        <select name="meio_transporte_volta" required>
                             <option value="selecione">Selecione</option>
                             <option value="onibus">Ônibus</option>
                             <option value="veiculo_proprio">Veículo próprio</option>
@@ -385,20 +385,20 @@
                     <div class="input-wrapper">
                         <span>Autorização uso de imagem: *</span>
                         <div class="radio-group">
-                            <label><input type="radio" name="uso_imagem" value="sim" required> Sim</label>
-                            <label><input type="radio" name="uso_imagem" value="não" required> Não</label>
-                            <label><input type="radio" name="uso_imagem" value="nao_informado" required>Não informado</label>
+                            <label><input type="radio" name="autorizacao_uso_imagem" value="sim" required> Sim</label>
+                            <label><input type="radio" name="autorizacao_uso_imagem" value="não" required> Não</label>
+                            <label><input type="radio" name="autorizacao_uso_imagem" value="nao_informado" required>Não informado</label>
                         </div>
                     </div>
                     <div class="input-wrapper">
                         <span>Observações:</span>
-                        <input type="text" name="observacao">
+                        <input type="text" name="observacoes">
                     </div>
 
                     <div class="input-wrapper">
                         <form action="/upload" method="post" enctype="multipart/form-data">
                             <label for="arquivo"><span>Selecione um arquivo: *</span></label>
-                            <input type="file" id="arquivo" name="arquivo" accept=".pdf, .doc, .docx">
+                            <input type="file" id="arquivo" name="arquivo" accept=".pdf, .doc, .docx"><br>
                             <button type="submit">Enviar</button>
                         </form>
                     </div>
