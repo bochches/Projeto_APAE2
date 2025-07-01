@@ -5,7 +5,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     var password = document.getElementById("password").value;
 
     const adminUsername = "admin";
-    const adminPassword = "admin";
+    const adminPassword = "administradorapae";
 
     if (username === adminUsername && password === adminPassword) {
         localStorage.setItem("isAdminLoggedIn", "true");

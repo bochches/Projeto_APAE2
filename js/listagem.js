@@ -141,7 +141,16 @@ function editFuncionario(index) {
                 deletePaciente(index);
             };
             actionsCell.appendChild(deleteButton);
-    
+
+            // Botão Ver Detalhes
+            var detalhesButton = document.createElement("button");
+            detalhesButton.textContent = "Ver Detalhes";
+            detalhesButton.className = "detail-button";
+            detalhesButton.onclick = function () {
+                showDetails(paciente);
+            };
+            actionsCell.appendChild(detalhesButton);
+                
             row.appendChild(actionsCell);
     
             patientList.appendChild(row);
@@ -314,7 +323,6 @@ function editFuncionario(index) {
         loadPacientes();
 }
 
-
     // Função para mostrar detalhes do paciente
     function showDetails(paciente) {
         const detailCard = document.getElementById("detail-card");
@@ -391,7 +399,11 @@ function editFuncionario(index) {
             <p><strong>Meio de transporte (volta):</strong> ${paciente.meio_transporte_volta}</p>
             <p><strong>Autorização uso de imagem:</strong> ${paciente.autorizacao_uso_imagem}</p>
             <p><strong>Observações:</strong> ${paciente.observacoes}</p>
-            <p><strong>Selecione um arquivo (caminho do arquivo):</strong> ${paciente.arquivo}</p>
+            <p><strong>Arquivo enviado:</strong> ${
+            paciente.arquivo_conteudo && paciente.arquivo_nome
+                ? `<a href="${paciente.arquivo_conteudo}" download="${paciente.arquivo_nome}" target="_blank">${paciente.arquivo_nome}</a>`
+                : 'Nenhum arquivo enviado'
+            }</p>
         `;
 
         detailCard.style.display = 'block';
