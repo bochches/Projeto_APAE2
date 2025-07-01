@@ -4,6 +4,22 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
+        const inputArquivo = document.querySelector('#arquivo');
+        const arquivo = inputArquivo.files[0];
+
+        if (arquivo) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const base64 = e.target.result;
+                salvarPaciente(form, base64, arquivo.name);
+            };
+            reader.readAsDataURL(arquivo);
+        } else {
+            salvarPaciente(form, '', '');
+        }
+    });
+
+    function salvarPaciente(form, arquivoBase64, nomeArquivo) {
         const getCheckboxValues = (name) => {
             return Array.from(form.querySelectorAll(`input[name="${name}"]:checked`))
                 .map(checkbox => checkbox.value);
@@ -79,7 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
             meio_transporte_ida: form.meio_transporte_ida.value,
             meio_transporte_volta: form.meio_transporte_volta.value,
             autorizacao_uso_imagem: form.autorizacao_uso_imagem.value,
-            observacoes: form.observacoes.value
+            observacoes: form.observacoes.value,
+            arquivo_nome: nomeArquivo,
+            arquivo_conteudo: arquivoBase64
         };
 
         let pacientes = JSON.parse(localStorage.getItem('pacientes')) || [];
@@ -88,5 +106,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         alert('Paciente cadastrado com sucesso!');
         window.location.href = 'listagem.html';
-    });
+    }
 });

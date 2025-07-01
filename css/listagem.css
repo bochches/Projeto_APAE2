@@ -124,6 +124,12 @@ button.more-info-button:hover {
     overflow-y: auto;
 }
 
+.detail-card {
+  max-height: 80vh; /* altura máxima de 80% da altura da tela */
+  overflow-y: auto; /* ativa o scroll vertical */
+  padding: 10px;
+}
+
 .detail-card h3 {
     margin-top: 0;
     font-size: 1.6em;
