@@ -28,6 +28,17 @@ body {
     margin-top: 20px;
 }
 
+.card input[type="text"],
+.card input[type="date"]{
+    width: calc(50% - 90px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+    margin: 5px;
+}
+
 h2 {
     font-size: 1.5em;
     margin-bottom: 20px;

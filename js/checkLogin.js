@@ -1,10 +1,15 @@
 window.onload = function () {
-    var isAdminLoggedIn = localStorage.getItem("isAdminLoggedIn");
+  /* aceita 'logado' OU 'currentUser' */
+  const sessionFlag = localStorage.getItem('logado');
+  const userObj     = JSON.parse(localStorage.getItem('currentUser'));
 
-    if (isAdminLoggedIn !== "true") {
-        window.location.href = "login.html";
-    } else {
-        localStorage.removeItem("isAdminLoggedIn");
-        loadUsers();
-    }
+  if (!sessionFlag && !userObj) {
+    window.location.href = "login.html";
+    return;
+  }
+
+  /* se a função loadUsers existir (admin), chame‑a */
+  if (typeof loadUsers === "function") {
+    loadUsers();
+  }
 };

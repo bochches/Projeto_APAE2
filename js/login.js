@@ -23,9 +23,12 @@ function login(event) {
 
     if (user) {
         localStorage.setItem('currentUser', JSON.stringify(user));
-        alert("Login bem-sucedido!");
-        window.location.href = "index.html"; // Redireciona para a página inicial ou qualquer outra página.
+        localStorage.setItem('logado', 'true');
+    if (user.role === 'admin') {
+        localStorage.setItem('isAdminLoggedIn', 'true');
     } else {
-        alert("Email ou senha incorretos!");
+        localStorage.removeItem('isAdminLoggedIn');
     }
+    window.location.href = 'index.html';
+    }    
 }
