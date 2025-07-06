@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Consultas</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/listagem.css"><!-- reaproveita o mesmo card/tabela -->
+</head>
+<body>
+  <header id="navbar-placeholder"></header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Novo Agendamento</h2>
+      <form id="agendarForm">
+        <label>Paciente:
+            <input type="text" id="pacienteInput" list="listaPacientes" required>
+            <datalist id="listaPacientes"><!-- opções geradas via JS --></datalist>
+        </label><br><br>
+
+        <label>Data da consulta:
+          <input type="date" id="dataConsulta" required>
+        </label><br><br>
+
+        <button type="submit" class="login-link">Agendar</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Consultas Agendadas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Paciente</th>
+            <th>Data</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="listaConsultas"><!-- preenchido via JS --></tbody>
+      </table>
+    </section>
+  </main>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/rodape.js"></script>
+    <script src="js/agendamento.js"></script>
+</body>
+</html>

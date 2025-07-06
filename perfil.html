@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil do Funcionário</title>
+  <!-- Reaproveita estilos existentes -->
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/listagem.css" /> <!-- cards, tabelas -->
+  <link rel="stylesheet" href="css/perfil.css" />  <!-- NOVO -->
+  <link rel="shortcut icon" href="img/autismo_logo.png" type="image/x-icon" />
+</head>
+<body>
+  <header id="navbar-placeholder"></header>
+
+  <main class="container perfil-container">
+    <h2>Bem-vindo, <span id="nomeUsuario"></span>!</h2>
+
+    <div class="cards-wrapper">
+      <a class="perfil-card" href="cadastroPaciente.html">
+        <i class="fas fa-user-plus"></i>
+        <span>Cadastrar Paciente</span>
+      </a>
+
+      <a class="perfil-card" href="listagem.html">
+        <i class="fas fa-users"></i>
+        <span>Lista de Pacientes</span>
+      </a>
+
+      <a class="perfil-card" href="agendamento.html">
+        <i class="fas fa-calendar-alt"></i>
+        <span>Agendar Consulta</span>
+      </a>
+    </div>
+  </main>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/rodape.js"></script>
+  <script src="js/checkLogin.js"></script>
+  <script src="js/perfil.js"></script>
+  <script
+    src="https://kit.fontawesome.com/6e8e6d21d2.js"
+    crossorigin="anonymous"></script>
+</body>
+</html>

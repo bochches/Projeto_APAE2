@@ -51,7 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
             firstname,
             lastname,
             email,
-            password
+            password,
+            role: "funcionario"
         };
 
         users.push(user);
